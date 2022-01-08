@@ -1,0 +1,455 @@
+/* Start Global Rules */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+
+
+/* Satrt NavBar */
+
+
+nav{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #0386ff;
+    /* background-color: #0074FC;  */
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .container .logo{
+    /* text-align: center; */
+    flex-basis: 20%;
+}
+@media (max-width: 1200px) {
+    nav .container .logo{
+        flex-basis: 50%;
+    }
+}
+nav .container .logo img{
+    max-width: 100% !important;
+}
+
+nav .container .left{
+    flex-basis: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+nav .container .left .links{
+    flex-basis: 87%;
+    text-align: center;
+}
+nav .container .left .links ul li{
+    display: inline-block;
+}
+nav .container .left .links ul li a{
+    text-decoration: none;
+    color: #FFF;
+    display: block;
+    padding: 10px 10px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+nav .container .left .links ul li a:hover{
+    opacity: .7;
+    transition: .3s;
+}
+
+nav .container .left .button{
+    flex-basis: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .container .left .button button{
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0074FC;
+    background-color: #FFF;
+    border: 1px solid #0074FC !important;
+    outline: none;
+    /* padding: 12px; */
+    border-radius: 13px;
+    cursor: pointer;
+    height: 34px;
+    width: 99px;
+    text-align: center;
+}
+nav .container .left .button button:hover{
+    background-color: #0386ff;
+    color: #FFF;
+    border: 1px solid #FFF !important;
+    transition: .5s;
+}
+
+
+#toggleBtn{
+    display: none;
+}
+@media (max-width: 1200px) {
+    #toggleBtn{
+        display: block;
+        font-size: 30px;
+        color: #FFF;
+        cursor: pointer;
+    }  
+}
+
+
+@media (max-width: 1200px) {
+    nav .container .left {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    nav .container{
+        position: relative;
+    }
+    nav .container .open{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 100;
+        top: 48px;
+        right: 12px;
+        background-color: #FFF;
+        border-radius: 5px;
+    }
+
+    nav .container .open .links ul li{
+        display: block;
+        border-bottom: 1px solid #0074FC;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-left: 11px;
+        padding-right: 70px;
+    }
+    nav .container .open .links ul li a{
+        color: #0074FC;
+    }
+
+    /* nav .container .open .button{
+        border-bottom: 1px solid #0074FC; 
+         padding-bottom: 5px; 
+    } */
+    nav .container .open .button button{
+        width: 100%;
+        border-radius: 0;
+        height: 45px;
+    }
+}
+
+
+/* End NavBar */
+
+
+
+
+/* Start Header */
+
+
+header{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #0386ff;
+    min-height: calc(100vh - 95px);
+}
+header .container{
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 0px;
+}
+@media (max-width: 991px) {
+    header .container{
+        padding-top: 0px;
+        flex-direction: column-reverse;
+    }
+}
+header .container .left{
+    flex-basis: 45%;
+}
+@media (max-width: 991px) {
+    header .container .left{
+        padding-top: 15px;
+    }
+}
+header .container .left h2{
+    color: #FFF;
+    font-weight: 500;
+    padding-bottom: 20px;
+    font-size: 40px;
+    line-height: 45px;
+}
+header .container .left p{
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFF;
+}
+
+header .container .right{
+    position: relative;
+    flex-basis: 45%;
+    text-align: center;
+    background-image: url('../images/Rectangle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header .container .right img{
+    max-width: 100% !important;
+}
+header .container .right img#star{
+    position: absolute;
+    top: 76px;
+    right: 61%;
+}
+
+
+
+/* End Header */
+
+
+
+
+/* Start services Section */
+
+
+.services{
+    background: #0386ff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.services .container h2{
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFF;
+    padding-bottom: 10px;
+}
+.services .container p{
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+}
+
+.services .container .all-ser{
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 0px;
+}
+.services .container .all-ser .box{
+    flex-basis: 30%;
+    background-color: #FFF;
+    padding: 15px 15px;
+}
+@media (max-width: 991px) {
+    .services .container .all-ser{
+        justify-content: space-around;
+    }
+    .services .container .all-ser .box{
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 670px) {
+    .services .container .all-ser .box{
+        flex-basis: 100%;
+    }
+}
+.services .container .all-ser .box img{
+    width: 60px;
+    max-width: 100%;
+    margin: 12px auto 15px;
+    display: flex;
+}
+.services .container .all-ser .box h2{
+    color: #0074FC;
+    font-size: 20px;
+}
+.services .container .all-ser .box p{
+    color: #0074FC;
+    font-size: 12px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+/* End services Section  */
+
+
+
+
+
+
+/* Start Footer */
+
+
+footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 0;
+}
+footer .container .col{
+    flex-basis: 30%;
+}
+@media (max-width: 991px) {
+    footer .container .col{
+        flex-basis: 45%;
+    }
+}
+@media (max-width: 767px) {
+    footer .container .col{
+        flex-basis: 100%;
+    }
+}
+footer .container .col p{
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0074FC;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+footer .container .col .icons img{
+    width: 40px;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+
+footer .container .col button{
+    height: 37.21818161010742px;
+    width: 203px;
+    left: 543px;
+    top: 2344px;
+    border-radius: 20px;
+    border: 1px solid #0074FC;
+    color: #0074FC;
+    background-color: transparent;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    cursor: pointer;
+}
+footer .container .col button:hover{
+    border: 1px solid #FFF;
+    background-color: #0074FC;
+    color: #FFF;
+    transition: .5s;
+}
+footer .container .col ul{
+    padding-bottom: 15px;
+    padding-top: 20px;
+}
+footer .container .col ul li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    position: relative;
+}
+footer .container .col ul li::before{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -20px;
+    height: 10px;
+    width: 10px;
+    background-color: #0074FC;
+    border-radius: 50%;
+}
+footer .container .col ul li a{
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0074FC;
+}
+footer .container .col ul li a:hover{
+    opacity: 0.7;
+    transition: .5s;
+}
+
+
+/* End Footer */
